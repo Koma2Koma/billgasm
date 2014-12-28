@@ -1,6 +1,4 @@
 class DeviseCreateUsers < ActiveRecord::Migration
-  has_many :bills
-
   def change
     create_table(:users) do |t|
       ## Database authenticatable

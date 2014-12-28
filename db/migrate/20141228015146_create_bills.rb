@@ -1,6 +1,4 @@
 class CreateBills < ActiveRecord::Migration
-  belongs_to :user
-  
   def change
     create_table :bills do |t|
       t.string :title
