@@ -1,0 +1,18 @@
+<div class='bill_form'>
+
+  <%= form_for :bill do |f| %>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <br><br>
+    <%= f.label :due_at %>
+    <%= f.date_select :due_at %>
+    <br><br>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+    <br><br>
+    <%= f.submit %>
+    
+  <% end %>
+
+</div>

@@ -1,3 +1,20 @@
 // Place all the styles related to the bills controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+
+}
+
+.bill_form {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  width: 60%;
+  margin-left: 15%;
+  margin-top: 100px;
+}

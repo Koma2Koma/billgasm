@@ -1,5 +1,6 @@
 class BillsController < ApplicationController
-  before_action :set_params, [:edit, :update, :show, :delete]
+  before_action :set_user
+  before_action :set_params, only: [:edit, :update, :show, :delete]
 
   def new
   end
@@ -17,7 +18,7 @@ class BillsController < ApplicationController
   end
 
   def index
-    @bills = Bill.all
+    @bills = current_user.bills.all
   end
 
   def delete
@@ -26,8 +27,12 @@ class BillsController < ApplicationController
 
   private
 
-    def set_params
-      @bill = Bill.find(params[:id])
+    def set_bill
+      @bill = @user.bills.find(params[:id])
+    end
+
+    def set_user
+      @user = current_user
     end
 
 end
