@@ -5,12 +5,12 @@
 
 
 .bill_form {
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border-top: 11px solid black;
+  border-bottom: 11px solid black;
 
   text-align: center;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 40%;
   width: 60%;
   margin-left: 15%;
   margin-top: 100px;
@@ -19,9 +19,9 @@
 }
 
 .show {
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
-  border-radius: 5px;
+  border-top: 11px solid black;
+  border-bottom: 11px solid black;
+  border-radius: 40%;
   text-align: center;
   margin-top: 15%;
   margin-left: 5%;
@@ -40,4 +40,20 @@
     min-width: 70px;
     border-radius: 5px;
   }
+}
+
+#bill_name {
+  display: inline-block;
+}
+
+.paid_unpaid {
+  display: inline-block;
+}
+
+#paid {
+  color: green;
+}
+
+#unpaid {
+  color: red;
 }

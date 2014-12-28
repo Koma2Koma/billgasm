@@ -5,15 +5,12 @@
   <h1><%= @bill.title %></h1>
   <h2>Due: <%= @bill.due_at %></h2>
   <h2>Amount: $<%= @bill.amount %></h2>
-  <% if @bill.paid %>
-    <h2 id='paid'>Paid!</h2>
-  <% else %>
-    <h2 id='unpaid'>Unpaid</h2>
-  <% end %>
+  <%= render 'paid' %>
 
 
   <div class='button'><%= button_to 'Edit', edit_user_bill_path(@user, @bill), method: :get %></div>
-  <div class='button'><%= button_to 'Delete', edit_user_bill_path(@user, @bill) %></div>
+  <div class='button'><%= button_to 'Delete', user_delete_path(@user, @bill), method: :delete %></div>
+  <div class='button'><%= button_to 'Back', user_bills_path(@user), method: :get %></div>
 
 
 </div>

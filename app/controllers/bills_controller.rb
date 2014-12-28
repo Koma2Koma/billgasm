@@ -1,7 +1,7 @@
 class BillsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user
-  before_action :set_bill, only: [:edit, :update, :show, :delete]
+  before_action :set_bill, only: [:edit, :update, :show, :destroy]
 
   def new
     @bill = @user.bills.build
@@ -14,6 +14,7 @@ class BillsController < ApplicationController
       # @task.user.task_total += 1
       redirect_to user_bill_path(@user, @bill)
     else
+      flash[:alert] = "Failed to save bill '#{@bill.title}.'"
       render 'new'
     end
   end
@@ -34,7 +35,14 @@ class BillsController < ApplicationController
     @bills = current_user.bills.all
   end
 
-  def delete
+  def destroy
+    if @bill.destroy
+      flash[:alert] = "Bill '#{@bill.title}' destroyed."
+      redirect_to user_bills_path(@user)
+    else
+      flash[:alert] = "Failed to delete bill '#{@bill.title}.'"
+      render 'show'
+    end
 
   end
 
