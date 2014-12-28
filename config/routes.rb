@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   
   devise_for :users
 
-  root 'bills#index'
+  root 'static_pages#home'
+
+  get 'static_pages/about' => 'static_pages#about', as: :about
 
   resources :users, only: [:show, :index] do
     resources :bills
