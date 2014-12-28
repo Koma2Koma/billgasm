@@ -5,6 +5,11 @@
   <h1><%= @bill.title %></h1>
   <h2>Due: <%= @bill.due_at %></h2>
   <h2>Amount: $<%= @bill.amount %></h2>
+  <% if @bill.paid %>
+    <h2 id='paid'>Paid!</h2>
+  <% else %>
+    <h2 id='unpaid'>Unpaid</h2>
+  <% end %>
 
 
   <div class='button'><%= button_to 'Edit', edit_user_bill_path(@user, @bill), method: :get %></div>

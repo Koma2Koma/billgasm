@@ -38,6 +38,7 @@ class BillsController < ApplicationController
 
   end
 
+
   private
 
     def set_bill
@@ -49,7 +50,7 @@ class BillsController < ApplicationController
     end
 
     def bill_params
-      params.require(:bill).permit(:title, :due_at, :amount)
+      params.require(:bill).permit(:title, :due_at, :amount, :paid)
     end
 
 end
