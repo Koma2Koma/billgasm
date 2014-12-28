@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-  text-align: center;
 
-}
 
 .bill_form {
   border-top: 5px solid black;
@@ -17,4 +14,30 @@ h1 {
   width: 60%;
   margin-left: 15%;
   margin-top: 100px;
+  
+
+}
+
+.show {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 15%;
+  margin-left: 5%;
+  width: 90%;
+  padding-bottom: 25px;
+
+
+}
+
+.button {
+  min-width: 50px;
+  display: inline-block;
+  input {
+    background-color: #FFCCCC;
+    min-height: 30px;
+    min-width: 70px;
+    border-radius: 5px;
+  }
 }

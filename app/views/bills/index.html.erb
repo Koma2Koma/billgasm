@@ -2,3 +2,9 @@
 <%= render 'bills_navbar' %>
 
 <h1>All Your Bills</h1>
+
+<% @user.bills.each do |bill| %>
+  
+  <h3> <%= link_to bill.title, user_bill_path(@user, bill)  %></h3>
+
+<% end %>

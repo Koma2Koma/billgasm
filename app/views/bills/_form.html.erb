@@ -1,17 +1,23 @@
 <div class='bill_form'>
 
-  <%= form_for :bill do |f| %>
+  <%= form_for [@user, @bill] do |f| %>
     
-    <%= f.label :title %>
+    <h3>
+    <%= f.label :title, 'Title:  ' %>
     <%= f.text_field :title %>
-    <br><br>
-    <%= f.label :due_at %>
+    </h3>
+    <br>
+    <h3>
+    <%= f.label :due_at, 'Due:  ' %>
     <%= f.date_select :due_at %>
-    <br><br>
-    <%= f.label :amount %>
+    </h3>
+    <br>
+    <h3>
+    <%= f.label :amount, 'Amount:  $' %>
     <%= f.text_field :amount %>
-    <br><br>
-    <%= f.submit %>
+    </h3>
+    <br>
+    <div class='button' ><%= f.submit %></div>
     
   <% end %>
 

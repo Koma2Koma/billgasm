@@ -1,6 +1,9 @@
 <div class='nav-bar'>
 
+  <%= link_to 'BillGasm', root_path %>
   <%= link_to 'New Bill', new_user_bill_path(current_user) %>
+  <%= link_to 'Account'  %>
+  <%= link_to 'View All Bills', user_bills_path(@user)  %>
 
 
 

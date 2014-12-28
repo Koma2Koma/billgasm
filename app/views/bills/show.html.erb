@@ -1,2 +1,14 @@
-<h1>Bills#show</h1>
-<p>Find me in app/views/bills/show.html.erb</p>
+<%= render 'bills_navbar' %>
+
+
+<div class='show'>
+  <h1><%= @bill.title %></h1>
+  <h2>Due: <%= @bill.due_at %></h2>
+  <h2>Amount: $<%= @bill.amount %></h2>
+
+
+  <div class='button'><%= button_to 'Edit', edit_user_bill_path(@user, @bill), method: :get %></div>
+  <div class='button'><%= button_to 'Delete', edit_user_bill_path(@user, @bill) %></div>
+
+
+</div>
