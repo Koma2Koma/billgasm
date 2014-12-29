@@ -1,12 +1,24 @@
 <div class='nav-bar'>
-  <%= link_to 'About Billgasm', about_path %>
+  <div class='left_nav'>
+    <p class='icon'><%= link_to 'BillGasm', root_path %></p>
+  </div>
 
-  <% if user_session %>
-    <%= link_to 'Your Bills', user_bills_path(current_user) %>
-    <%= link_to 'Log-Out', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign-Up', new_user_registration_path %>
-    <%= link_to 'Log-In', new_user_session_path %>
-  <% end %>
+  <div class='right_nav'>
+    <p class='nav-links'>
+      <ul>
+        <% if user_session %>
+          <li><%= link_to 'Your Bills', user_bills_path(current_user) %></li>
+          <li>Account</li>
+            <ul>
+              <li><%= link_to 'Stats' %></li>
+              <li><%= link_to 'Log-Out', destroy_user_session_path, method: :delete %></li>
+            </ul>
+        <% else %>
+          <li><%= link_to 'Sign-Up', new_user_registration_path %></li>
+          <li><%= link_to 'Log-In', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </p>
+  </div>
 
 </div>

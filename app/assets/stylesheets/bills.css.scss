@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+////// Bill form ////////
 
 .bill_form {
   border-top: 11px solid black;
@@ -14,24 +14,9 @@
   width: 60%;
   margin-left: 15%;
   margin-top: 100px;
-  
-
 }
 
-
-
-.show {
-  border-top: 11px solid black;
-  border-bottom: 11px solid black;
-  border-radius: 10%;
-  text-align: center;
-  margin-top: 10%;
-  margin-left: 5%;
-  width: 90%;
-  padding-bottom: 25px;
-  
-
-}
+//// Buttons /////
 
 .button {
   min-width: 50px;
@@ -43,6 +28,21 @@
     border-radius: 5px;
   }
 }
+
+//// Show and index styling /////
+
+.show {
+  border-top: 11px solid black;
+  border-bottom: 11px solid black;
+  border-radius: 10%;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 90%;
+  padding-bottom: 25px;
+}
+
+//// Index page ////
 
 #bill_name {
   display: inline-block;
