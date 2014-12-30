@@ -134,8 +134,37 @@ h1 {
 //// Status page ////
 
 
+.status-paid, .status-unpaid {
+  border-top: 11px solid black;
+  border-bottom: 11px solid black;
+  border-radius: 10%;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 90%;
+  padding-bottom: 25px;
+  h2 {
+    display: inline-block;
+    width: 110px;
+  }
+  h1 {
+    margin-top: 10px;
+    width: 75%;
+  }
+  #no-P {
+    color: red;
+  }
+  #yes-P {
+    color: green;
+  }
+}
 
+.total {
+  h2 {
+    border-top: 5px solid black;
 
+  }
+}
 
 
 

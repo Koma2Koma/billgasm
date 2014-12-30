@@ -56,6 +56,7 @@ class BillsController < ApplicationController
 
   private
 
+
     def set_bill
       @bill = @user.bills.find(params[:id])
     end

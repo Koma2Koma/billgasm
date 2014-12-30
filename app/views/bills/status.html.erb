@@ -3,28 +3,38 @@
 
 <div class='status-unpaid'>
 
-  <h1>Bills Not Paid</h1>
+  <h1><strong id='no-P'>Unpaid</strong> Bills</h1>
 
   <% @user.bills.each do |bill| %>
     <% unless bill.paid %>
       <h2><%= link_to bill.title, user_bill_path(@user, bill)  %></h2>
-      <h2>Amount: $<%= bill.amount  %></h2>
+      <h2>$<%= bill.amount  %></h2>
+      <br>
     <% end %>
   <% end %>
   
+  <div class='total'>
+    <h2>Total: </h2>
+    <h2>$<%= total('unpaid') %></h2>
+  </div>
 
 </div>
 
 <div class='status-paid'>
 
-  <h1>Paid Bills</h1>
+  <h1><strong id='yes-P'>Paid</strong> Bills</h1>
 
   <% @user.bills.each do |bill| %>
     <% if bill.paid %>
       <h2><%= link_to bill.title, user_bill_path(@user, bill)  %></h2>
-      <h2>Amount: $<%= bill.amount  %></h2>
+      <h2>$<%= bill.amount  %></h2>
+      <br>
     <% end %>
   <% end %>
   
+  <div class='total'>
+    <h2>Total: </h2>
+    <h2>$<%= total('paid') %></h2>
+  </div>
 
 </div>
