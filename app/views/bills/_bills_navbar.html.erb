@@ -3,7 +3,7 @@
     <li><%= link_to 'Add a Bill', new_user_bill_path(current_user) %></li>
     <li><%= link_to 'View All Bills', user_bills_path(@user)  %></li>
     <li id='sort'>Sort by:</li>    
-    <li><%= link_to 'Paid Status'  %></li>
+    <li><%= link_to 'Paid Status', user_bills_status_path(@user)  %></li>
     <li><%= link_to 'Date Due', user_due_by_path(@user) %></li>
   </ul>
 </div>

@@ -1,0 +1,30 @@
+<%= render 'bills_navbar' %>
+
+
+<div class='status-unpaid'>
+
+  <h1>Bills Not Paid</h1>
+
+  <% @user.bills.each do |bill| %>
+    <% unless bill.paid %>
+      <h2><%= link_to bill.title, user_bill_path(@user, bill)  %></h2>
+      <h2>Amount: $<%= bill.amount  %></h2>
+    <% end %>
+  <% end %>
+  
+
+</div>
+
+<div class='status-paid'>
+
+  <h1>Paid Bills</h1>
+
+  <% @user.bills.each do |bill| %>
+    <% if bill.paid %>
+      <h2><%= link_to bill.title, user_bill_path(@user, bill)  %></h2>
+      <h2>Amount: $<%= bill.amount  %></h2>
+    <% end %>
+  <% end %>
+  
+
+</div>
