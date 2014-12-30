@@ -1,0 +1,53 @@
+<%= render 'bills_navbar' %>
+
+<h1>Your Stats</h1>
+
+<div class='stats'>
+  
+  <h2>Total Bills:</h2>
+  <h2><%= @user.bills.count %></h2>
+  <br>
+  <h2>Paid Bills:</h2>
+  <h2><%= counter('paid') %></h2>
+  <br>
+  <h2>Unpaid Bills:</h2>
+  <h2><%= counter('unpaid') %></h2>
+  <br>
+
+
+</div>
+
+<div class='stats'>
+  
+  
+  <h2>Amount Paid:</h2>
+  <h2>$<%= total('paid') %></h2>
+  <br>
+  <h2>Amount Unpaid:</h2>
+  <h2>$<%= total('unpaid') %></h2>
+  <br>
+  <h2>Total Amount:</h2>
+  <h2>$<%= total('paid') + total('unpaid') %></h2>
+  <br>
+
+</div>
+
+<div class='stats'>
+  
+  <h2>Bills Due in...</h2>
+  <h2></h2>
+  <br>
+  <h2>Next 30 Days:</h2>
+  <h2><%= due_within(1).size %></h2>
+  <br>
+  <h2>Next 6 Months:</h2>
+  <h2><%= due_within(6).length %></h2>
+  <br>
+  <h2>Next 12 Months:</h2>
+  <h2><%= due_within(12).count %></h2>
+  <br>
+
+</div>
+
+
+

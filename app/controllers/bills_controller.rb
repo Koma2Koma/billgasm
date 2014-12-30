@@ -53,6 +53,9 @@ class BillsController < ApplicationController
     
   end
 
+  def stats
+  end
+
 
   private
 

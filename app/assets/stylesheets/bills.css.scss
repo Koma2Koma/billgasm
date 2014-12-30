@@ -166,7 +166,23 @@ h1 {
   }
 }
 
+//// Stats Page ////
 
+.stats {
+  border-left: 11px solid black;
+  border-right: 11px solid black;
+  border-radius: 20%;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 90%;
+  padding-bottom: 25px;
+  h2 {
+    display: inline-block;
+    width: 140px;
+    margin-bottom: 0;
+  }
+}
 
 
 
