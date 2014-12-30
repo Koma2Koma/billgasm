@@ -7,14 +7,28 @@
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<div id='container'></div>
+  <body>
+    <div class='wrapper'>
+        <%= render 'layouts/nav_bar' %>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+        <div class='push'></div>
+
+        <footer>
+          <div class='foot-left'>
+            <h4>Maximize sensation while fondling your bills.</h4>
+          </div>
+          <div class='foot-right'>
+            <h4>by Konrad Maurer</h4>
+            <h4>Copyright 2014</h4>
+          </div>
+        </footer>
+    </div>
+  </body>
   
-  <%= render 'layouts/nav_bar' %>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-<%= yield %>
-
-</body>
+</div>
 </html>

@@ -16,9 +16,17 @@
 
 ///// Body /////
 
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Helvetica, serif, sans-serif;
   margin-top: 100px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
   
 }
 
@@ -96,6 +104,52 @@ a:hover {
   #main_logo {
     width: 100%
   }
+}
+
+//// Footer ////
+
+footer {
+  width: 100%;
+  height: 45px;
+  background-color: #E6E6E6;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 2px solid black;
+  h4 {
+    vertical-align: top;
+    margin-bottom: 0px;
+    margin-top: 3px;
+  }
+  .foot-left {
+    display: inline-block;
+    width: 55%;
+    margin-left: 10px;
+    color: #666;
+
+  }
+  .foot-right {
+    float: right;
+    min-width: 140px;
+    width: 10%;
+    text-align: left;
+    margin-right: 10px;
+    text-align: right;
+
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+.footer, .push {
+  height: 4em;
 }
 
 
