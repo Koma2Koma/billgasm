@@ -40,9 +40,15 @@
 h1 {
   text-align: center;
   margin-top: 10%;
+  margin-bottom: 0;
   font-family: 'Pacifico', cursive;
   font-size: 2.4em;
   width: 50%;
+}
+
+.sub-title {
+  font-size: 2em;
+  margin-top: 0;
 }
 
 //// Bills Nav Bar ////
@@ -87,22 +93,40 @@ h1 {
   margin-left: 5%;
   width: 90%;
   padding-bottom: 25px;
+  h4 {
+    display: inline-block;
+    min-width: 100px;
+
+  }
 }
 
-//// Index page ////
+.pay {
+  text-align: center;
+  width: 100%;
 
-#bill_name {
+}
+
+.line_item {
   display: inline-block;
+  width: 110px;
+  text-align: left;
 }
 
 .paid_unpaid {
   display: inline-block;
 }
 
+
 #paid {
   color: green;
+  width: 50px;
+  text-align: center;
+  margin-left: 48%;
 }
 
 #unpaid {
   color: red;
+  width: 50px;
+  text-align: center;
+  margin-left: 48%;
 }

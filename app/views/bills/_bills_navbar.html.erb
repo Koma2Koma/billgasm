@@ -4,6 +4,6 @@
     <li><%= link_to 'View All Bills', user_bills_path(@user)  %></li>
     <li id='sort'>Sort by:</li>    
     <li><%= link_to 'Paid Status'  %></li>
-    <li><%= link_to 'Date Due' %></li>
+    <li><%= link_to 'Date Due', user_due_by_path(@user) %></li>
   </ul>
 </div>

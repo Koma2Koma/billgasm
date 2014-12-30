@@ -20,7 +20,6 @@ class BillsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -44,6 +43,14 @@ class BillsController < ApplicationController
       render 'show'
     end
 
+  end
+
+  def status
+
+  end
+
+  def by_due
+    
   end
 
 

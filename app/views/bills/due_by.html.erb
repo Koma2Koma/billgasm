@@ -1,11 +1,13 @@
-
 <%= render 'bills_navbar' %>
 
-<h1>Your Bills</h1>
+<h1>Bills:</h1>
+<h1 class='sub-title'>By Date Due</h1>
+
 
 <div class='show'>
-  <% @user.bills.each do |bill| %>
+  <% @user.bills.all.order(:due_at).each do |bill| %>
     
+    <h4 class='line_item'><%= bill.due_at.strftime("%-m/%-d/%Y") %></h4>
     <h3 class='line_item'> <%= link_to bill.title, user_bill_path(@user, bill)  %></h3>
     <div class='paid_unpaid'>
       <% if bill.paid %>
