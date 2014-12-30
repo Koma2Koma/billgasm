@@ -1,9 +1,10 @@
-<%= render 'bills_navbar' %>
+
+<h1><%= @bill.title %></h1>
 
 
 <div class='show'>
-  <h1><%= @bill.title %></h1>
-  <h2>Due: <%= @bill.due_at %></h2>
+  <h2><%= @bill.title %></h2>
+  <h2>Due: <%= "#{@bill.due_at.strftime("%A")}, #{@bill.due_at.strftime("%B")} #{@bill.due_at.strftime("%e")}, #{@bill.due_at.strftime("%Y")}" %></h2>
   <h2>Amount: $<%= @bill.amount %></h2>
   <%= render 'paid' %>
 

@@ -18,7 +18,7 @@
 
 body {
   font-family: Helvetica, serif, sans-serif;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 
@@ -27,6 +27,7 @@ body {
 a:link {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 a:visited {
@@ -38,7 +39,7 @@ a:hover {
   font-weight: bolder;
 }
 
-//// Static Pages Nav Bar /////
+//// Page Nav Bar /////
 
 .nav-bar {
   height: 45px;
@@ -52,33 +53,22 @@ a:hover {
   .left_nav {
     display: inline-block;
     height: 30px;
-    width: 50%;
+    width: 20%;
   }
   .right_nav {
     display: inline-block;
-    width: 45%;
+    width: 75%;
     text-align: right;
     .nav-links {
       font-size: large;
       font-weight: bold;
     }
     ul {
-      display: inline;
+      list-style: none;
       li {
-        list-style: none;
-        display : inline-block;
-        position: relative;
-        ul {
-          visibility: hidden;
-          position: absolute;
-          li {
-            display: block;
-          }
-        }
-      }
-      li:hover ul {
-        display: block;
-        visibility: visible;
+        display: inline-block;
+        width: 73px;
+        text-align: center;
       }
     }
   }
@@ -90,3 +80,32 @@ a:hover {
   margin: 0;
   margin-left: 5%;
 }
+
+//// Home Page /////
+
+#home {
+  height: 75%;
+  text-align: center;
+  margin-top: 15%;
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    text-decoration: underline;
+  }
+  #main_logo {
+    width: 100%
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

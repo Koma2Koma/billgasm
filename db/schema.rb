@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20141228015146) do
 
   create_table "bills", force: true do |t|
     t.string   "title"
-    t.time     "due_at"
+    t.datetime "due_at"
     t.integer  "amount"
-    t.boolean  "paid"
+    t.boolean  "paid",       default: false
     t.boolean  "is_late"
     t.integer  "user_id"
     t.datetime "created_at"
