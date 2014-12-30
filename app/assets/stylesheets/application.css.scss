@@ -23,12 +23,14 @@ html, body {
 
 body {
   font-family: Helvetica, serif, sans-serif;
+  background-image: url('moneyrain.jpg');
+  background-attachment: fixed;
   margin-top: 100px;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
-  
 }
+
 
 
 ///// Link styling /////
@@ -93,9 +95,8 @@ a:hover {
 //// Home Page /////
 
 #home {
-  height: 75%;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 20%;
   h1 {
     font-family: 'Pacifico', cursive;
     font-size: 4em;
